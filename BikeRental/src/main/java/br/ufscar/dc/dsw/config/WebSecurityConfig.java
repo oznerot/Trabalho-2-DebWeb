@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import br.ufscar.dc.dsw.security.MyUserDetailsServiceImpl;
 
@@ -42,6 +43,7 @@ public class WebSecurityConfig
 		auth.authenticationProvider(authenticationProvider());
 	}
 	*/
+	
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

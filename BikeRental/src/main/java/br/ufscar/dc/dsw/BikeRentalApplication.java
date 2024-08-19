@@ -141,7 +141,7 @@ public class BikeRentalApplication {
 			rentalDao.save(lo2);
 
 			Rental lo3 = new Rental();
-			lo3.setDate("12/11/2021");
+			lo3.setDate("12/11/2021 17:00" );
 			lo3.setValue(BigDecimal.valueOf(15.8));
 			lo3.setClient(c1);
 			lo3.setCompany(l3);

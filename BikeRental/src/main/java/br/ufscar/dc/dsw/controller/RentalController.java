@@ -49,7 +49,7 @@ public class RentalController
     public String register(Rental rental, Model model)
     {
         List<Company> companies = companyService.findAll();
-        model.addAttribute("Company", companies);
+        model.addAttribute("companies", companies);
 
         return "rental/register";
     }
@@ -72,7 +72,7 @@ public class RentalController
         model.addAttribute("rental", service.findById(id));
 
         List<Company> companies = companyService.findAll();
-        model.addAttribute("Company", companies);
+        model.addAttribute("companies", companies);
 
         return "rental/register";
     }
@@ -98,7 +98,7 @@ public class RentalController
     {
         User user = this.getUser();
         String role = user.getRole();
-
+    
         if(role.equals("ROLE_CLIENT"))
             model.addAttribute("rentals", service.findAllByClient(user.getId()));
         else

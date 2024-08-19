@@ -13,7 +13,6 @@
 		<h1 th:text="#{user.index.title}"></h1>
 		<h1>
 			<span th:text="#{home.hello}"></span>
-			<span th:inline="text">[[${#httpServletRequest.remoteUser}]]!</span>
 		</h1>
 		
 		<a class="btn btn-primary mb-2" type="button" 
@@ -23,7 +22,7 @@
 			<a class="btn btn-primary mb-2" type="button" th:href="@{/rentals/register}" th:text="#{rental.register.label}"></a>
 		</sec:authorize>
 					
-		<a class="btn btn-primary" type="button"
+		<a class="btn btn-primary" type="button" q
 				href="javascript:history.back()"><span th:text="#{previous.message}"></span>
 		</a>
 	</div>

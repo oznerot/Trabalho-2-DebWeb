@@ -17,6 +17,7 @@ br/ufscar/dc/dsw/dao/IRentalDAO.class
 br/ufscar/dc/dsw/security/MyUserDetails.class
 br/ufscar/dc/dsw/service/spec/IRentalService.class
 br/ufscar/dc/dsw/service/spec/IClientService.class
+br/ufscar/dc/dsw/controller/UserController.class
 br/ufscar/dc/dsw/validation/UniqueCpf.class
 br/ufscar/dc/dsw/validation/UniqueCnpjValidator.class
 br/ufscar/dc/dsw/dao/IClientDAO.class
