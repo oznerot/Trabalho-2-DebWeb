@@ -24,6 +24,6 @@ public interface IRentalDAO extends CrudRepository<Rental, Long>{
 	
 	void deleteById(Long id);
 
-	@Query("SELECT rental FROM Rental rental WHERE (rental.company.id = ?1 OR rental.client.id = ?2) AND (rental.date = ?3) ")
+	@Query("SELECT rental FROM Rental rental WHERE (rental.company.id = ?1 OR rental.client.id = ?2) AND (rental.date = ?3)")
 	List<Rental> findRentalsByClientAndCompanyAndDate(Long company, Long client, String date);
 }

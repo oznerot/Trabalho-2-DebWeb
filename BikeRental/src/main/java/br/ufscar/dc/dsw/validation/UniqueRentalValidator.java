@@ -18,7 +18,7 @@ public class UniqueRentalValidator implements ConstraintValidator<UniqueRental, 
     @Override
     public boolean isValid(Rental rental, ConstraintValidatorContext context) {
         if(dao != null && rental != null) {
-        	return dao.findRentalsByClientAndCompanyAndDate(rental.getClient().getId(), rental.getCompany().getId(), rental.getDate()).isEmpty();
+        	return dao.findRentalsByClientAndCompanyAndDate(rental.getCompany().getId(), rental.getClient().getId(), rental.getDate()).isEmpty();
 
         }
         

@@ -55,8 +55,15 @@ public class RentalController
     }
 
     @PostMapping("/save")
-    public String save(@Valid Rental rental, BindingResult result, RedirectAttributes attr, Authentication auth)
+    public String save(@Valid Rental rental, BindingResult result, RedirectAttributes attr, Authentication auth, Model model)
     {
+        if(result.hasErrors())
+        {
+            List<Company> companies = companyService.findAll();
+            model.addAttribute("companies", companies);
+            return "rental/register";
+        }
+
         String email = auth.getName();
         Client loggedClient = clientService.findByEmail(email);
         rental.setClient(loggedClient);

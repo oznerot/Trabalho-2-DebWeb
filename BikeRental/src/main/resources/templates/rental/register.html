@@ -11,10 +11,6 @@
 
     <section class="layout-content" layout:fragment="corpo">
 		
-		<h3>
-			<span th:text="#{home.hello}"></span>
-		</h3>
-		
 		<nav class="navbar navbar-inverse navbar-static-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -65,9 +61,9 @@
 					<div class="form-group col-md-6">
 					    <label for="company">Locadora:</label>
 					    <select id="company" name="company" th:field="*{company}">
-					        <option th:each="company : ${Company}" 
+					        <option th:each="company : ${companies}" 
 					                th:value="${company.id}" 
-					                th:text="${company.nome}"></option>
+					                th:text="${company.name}"></option>
 					    </select>
 					    
 					    <div class="invalid-feedback">
