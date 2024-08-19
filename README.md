@@ -1,4 +1,4 @@
-# Trabalho 2 de Desenvolvimento de Software para Web 1:
+# Trabalho 2 - Desenvolvimento de Software para Web 1:
 
 - Caio Ueda Sampaio - RA : 802215
 - Gabriel Pandolfi Correa dos Santos - RA : 769831
@@ -6,7 +6,7 @@
 - Vitor Enzo Araujo Costa - RA : 802123
 
 
-## Aplicação Escolhida:
+# Aplicação Escolhida:
 
 A aplicação se trata de um sistema simples de gerenciamento de locação de biciletas, contendo implementação de CRUD para manipulação de clientes. 
 
@@ -57,13 +57,13 @@ O sistema deve tratar todos os erros possíveis (cadastros duplicados, problemas
 
 ## Tecnologias Utilizadas:
 
-    **Lado Servidor:**
+   **Lado Servidor:**
 
-    - Spring MVC, Spring Data JPA, Spring Security & Thymeleaf
+   - Spring MVC, Spring Data JPA, Spring Security & Thymeleaf
 
-    **Lado Cliente:**
+   **Lado Cliente:**
 
-    - Javascript & CSS
+   - Javascript & CSS
 
 ## Arquitetura 
 
