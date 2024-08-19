@@ -99,7 +99,7 @@ public class RentalController
         User user = this.getUser();
         String role = user.getRole();
 
-        if(role.equals("CLIENT_ROLE"))
+        if(role.equals("ROLE_CLIENT"))
             model.addAttribute("rentals", service.findAllByClient(user.getId()));
         else
             model.addAttribute("rentals", service.findAllByCompany(user.getId()));

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <span th:if="${#authentication.principal == null}">
+        Welcome, <span th:text="${#authentication.name}">User</span>!
+    </span>
+    <div layout:fragment="content" th:remove="tag">
+        <h1 th:text="#{index.message.1}"></h1>
+        <p th:text="#{index.message.2}"></p>
+        <ul>
+            <li><a th:href="@{/home}"><span th:text="#{index.message.3}"></a></li>
+        </ul>
+        <h2 class="text-left" th:text="#{company.list.label}"></h2>
+        <form method="get" th:action="@{/}" class="form-inline my-2 my-lg-0">
+            <input type="text" name="city" class="form-control mr-sm-2" placeholder="Insert city">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+        </form>
+        <section class="layout-content" layout:fragment="corpo">
+            <div class="container" id="listagem" >
+                <div class="table-responsive">
+                    <table class="table table-striped" border="1">
+                        <thead>
+                            <tr>
+                                <th th:text="#{company.email.label}"></th>
+                                <th th:text="#{company.name.label}"></th>
+                                <th th:text="#{company.CNPJ.label}"></th>
+                                <th th:text="#{company.city.label}"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="company : ${companies}">
+                                <td th:text="${company.email}"></td>
+                                <td th:text="${company.name}"></td>
+                                <td th:text="${company.cnpj}"></td>
+                                <td th:text="${company.city}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

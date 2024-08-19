@@ -34,22 +34,22 @@
                             <th th:text="#{company.name.label}"></th>
                             <th th:text="#{company.CNPJ.label}"></th>
                             <th th:text="#{company.city.label}"></th>
-                            <th th:text="#{acao.label}"></th>
+                            <th th:text="#{action.label}"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="locadora : ${locadoras}">
-                            <td th:text="${locadora.id}"></td>
-                            <td th:text="${locadora.email}"></td>
-                            <td th:text="${locadora.nome}"></td>
-                            <td th:text="${locadora.cnpj}"></td>
-                            <td th:text="${locadora.cidade}"></td>
+                        <tr th:each="company : ${companies}">
+                            <td th:text="${company.id}"></td>
+                            <td th:text="${company.email}"></td>
+                            <td th:text="${company.name}"></td>
+                            <td th:text="${company.cnpj}"></td>
+                            <td th:text="${company.city}"></td>
                             <td>
-                                <a class="btn btn-info btn-sm" th:href="@{/locadoras/editar/{id}(id=${locadora.id})}" role="button"> 
-                                    <span class="oi oi-brush" th:text="#{link.editar.label}" aria-hidden="true"></span>
+                                <a class="btn btn-info btn-sm" th:href="@{/companies/edit/{id}(id=${company.id})}" role="button"> 
+                                    <span class="oi oi-brush" th:text="#{link.edit.label}" aria-hidden="true"></span>
                                 </a>
-                                <a class="btn btn-danger btn-sm" th:href="@{/locadoras/excluir/{id}(id=${locadora.id})}" role="button"> 
-                                    <span class="oi oi-brush" th:text="#{link.excluir.label}" aria-hidden="true"></span>
+                                <a class="btn btn-danger btn-sm" th:href="@{/companies/delete/{id}(id=${company.id})}" role="button"> 
+                                    <span class="oi oi-brush" th:text="#{link.delete.label}" aria-hidden="true"></span>
                                 </a>
                             </td>
                         </tr>

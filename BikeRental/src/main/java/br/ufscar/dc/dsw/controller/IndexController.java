@@ -18,10 +18,10 @@ public class IndexController {
 
 	@GetMapping("")
 	public String list(@RequestParam(value = "city", required = false) String city, ModelMap model) {
-		if (city == null) {
-			model.addAttribute("company", service.findAll());
+		if (city == null || city == "") {
+			model.addAttribute("companies", service.findAll());
 		} else {
-			model.addAttribute("company", service.findByCity(city));
+			model.addAttribute("companies", service.findByCity(city));
 		}
 		return "/index";
 	}

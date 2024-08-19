@@ -27,6 +27,7 @@ public class WebSecurityConfig
 		return new BCryptPasswordEncoder();
 	}
 
+	/*
 	@Bean
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
@@ -36,9 +37,11 @@ public class WebSecurityConfig
 		return authProvider;
 	}
 
+	
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.authenticationProvider(authenticationProvider());
 	}
+	*/
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
