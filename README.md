@@ -1,9 +1,9 @@
 # Trabalho 2 de Desenvolvimento de Software para Web 1:
 
-*Caio Ueda Sampaio - RA : 802215*
-*Gabriel Pandolfi Correa dos Santos - RA : 769831*
-*Pedro Henrique Borges - RA : 804071*
-*Vitor Enzo Araujo Costa - RA : 802123* 
+- *Caio Ueda Sampaio - RA : 802215*
+- *Gabriel Pandolfi Correa dos Santos - RA : 769831*
+- *Pedro Henrique Borges - RA : 804071*
+- *Vitor Enzo Araujo Costa - RA : 802123* 
 
 
 ## Aplicação Escolhida:
